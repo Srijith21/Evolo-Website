@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="UTF-8" />
+        <title>Evolo</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" />
+        <link rel="stylesheet" href="{% static 'css/fontello.css' %}" type="text/css" />
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="{% static 'images/favicon.png' %}"
+        />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:image" content="" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+    </head>
+    <body>
+        <section class="backgroundimage">
+ <!-- header -->
+            <Header>
+                <section class="wrapper">
+                    <h1 class="left">
+                        <a href=""><img src="{% static '/images/logo.svg' %}" alt=""></a>
+                    </h1>
+                    <nav class="right">
+                        <ul>
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Services</a></li>
+                            <li><a href="">Pricing</a></li>
+                            <li><a href="">Request</a></li>
+                            <li><a href="">About
+                                <span>
+                                <img src="{% static 'images/down-arrow.png' %}" alt="">
+                                </span>
+                            </a></li>
+                            <li><a href="">Contact</a></li>
+                            <li><a href=""><img src="{% static 'images/facebook.png' %}" alt=""></a></li>
+                            <li><a href=""><img src="{% static 'images/twitter.png' %}" alt=""></a></li>
+                        </ul>
+                    </nav>
+                </section>
+            </Header>
+<!-- spotlight  -->
+            <section id="spotlight">
+                <section class="content">
+                    <div class="left">
+                        <div class="content-inner">
+                            <h1>StartUp Landing</h1>
+                            <h2>Page Template Free </h2>
+                            <p>Use Evolo free landing page template to promote your business startup and generate leads for the offered services </p>
+                            <a href="" class="button">Discover</a>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <span class="imgcontainer">
+                            <img src="{% static 'images/header-teamwork.svg' %}" alt="">
+                        </span>
+                    </div>
+                </section>
+            </section>
+        </section>
+<!-- costomers -->
+        <section id="customers">
+            <section class="wrapper">
+                <h6>Trusted By</h6>
+                <ul>
+                    {% for customer in customers %}
+                    <li><a href=""><img src="{{customer.image.url}}" alt=""></a></li>
+                    {% endfor %}
+                </ul>
+            </section>
+        </section>
+<!-- services -->
+        <section id="services">
+            <section class="wrapper">
+                <div class="top">
+                    <h3>Business Growth Services</h3>
+                    <p>We serve small and medium sized companies in all tech related industries with <br/> quality growth services which are presented below</p>
+                </div>
+                <div class="bottom">
+                    <ul>
+                        <li>
+                            <img src="{% static 'images/services-icon-1.svg' %}" alt="">
+                            <h4>Market Analysis</h4>
+                            <p>Our team of enthusiastic marketers will analyse and evaluate how your company stacks against the closest competitors</p>
+                        </li> 
+                        <li>
+                            <img src="{% static 'images/services-icon-2.svg' %}" alt="">
+                            <h4>Opertunity Scan</h4>
+                            <p>Our team of enthusiastic marketers will analyse and evaluate how your company stacks against the closest competitors</p>
+                        </li> 
+                        <li>
+                            <img src="{% static 'images/services-icon-3.svg' %}" alt="">
+                            <h4>Action Plan</h4>
+                            <p>Our team of enthusiastic marketers will analyse and evaluate how your company stacks against the closest competitors</p>
+                        </li>  
+                    </ul>
+                </div>
+            </section>
+        </section>
+<!-- highlights -->
+        <section id="highlights">
+            <section class="wrapper">
+                <section class="item">
+                    <div class="content_box">
+                        <h2>Design and plan your Business Growth Steps</h2> 
+                        <p>Use our staffs and expertise to design and plan your business growth strategy.Evolo team is eager to advice you on the best oppertunities that you should look into</p> 
+                        <a href="" class="button">Light Box</a>
+                    </div>
+                    <div class="img_container">
+                        <img src="{% static 'images/details-1-office-worker.svg' %}" alt="">
+                    </div>
+                </section>
+
+                <section class="item">
+                    <div class="img_container">
+                        <img src="{% static 'images/details-2-office-team-work.svg' %}" alt="">
+                    </div>
+                    <div class="content_box">
+                        <h2>Search for optimization wherever is Possible </h2>
+                        <span>
+                            <img src="{% static '/images/check.png' %}" alt="">
+                            <p>Basically we'll teach you step by step what you need to do</p>
+
+                        </span>
+                        <span>
+                            <img src="{% static '/images/check.png' %}" alt="">
+                            <p>In order to develop your company and reach new heights</p>
+                        </span> 
+                        <span>
+                            <img src="{% static '/images/check.png' %}" alt="">
+                            <p>Everyone will be pleased from stakeholders to employees</p>
+                        </span> 
+                        <a href="" class="button">Light Box</a>
+                    </div>
+                </section>
+            </section>
+        </section>
+<!-- pricing -->
+        <section id="pricing">
+            <section class="wrapper">
+                <div class="top">
+                    <h3>Multiple Pricing options</h3>
+                    <p>Lorem ipsum dolor sit amet fficiis quo et? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae, quae.</p>
+                </div>
+                <div class="bottom">
+                    <ul>
+                        <li>
+                            <h4>STARTER</h4>
+                            <p>Just to see what can be achieved</p>
+                            <div class="pricebox">
+                                <h5>$199</h5>
+                                <p>Monthly</p>
+                            </div>
+                            <div class="price_detail">
+                                <span>
+                                    <img src="{% static '/images/check.png' %}" alt="">
+                                    <p>Improve Your Email Marketing</p>
+                                </span>
+                                <span>
+                                    <img src="{% static '/images/check.png' %}" alt="">
+                                    <p>User And Admin Rights Control</p>
+                                </span>
+                                <span>
+                                    <img src="{% static '/images/cancel.png' %}" alt="">
+                                    <p>List Building And Cleaning</p>
+                                </span>
+                                <span>
+                                    <img src="{% static '/images/cancel.png' %}" alt="">
+                                    <p> Collected Data Management.</p>
+                                </span>
+                                <span>
+                                    <img src="{% static '/images/cancel.png' %}" alt="">
+                                    <p>More Planning And Evaluation</p>
+                                </span>
+
+                            </div>
+                            <a href="" class="button">REQUEST</a>
+                        </li>
+                        <li>
+                            <h4>MEDIUM</h4>
+                            <p>Just to see what can be achieved</p>
+                            <div class="pricebox">
+                                <h5>$299</h5>
+                                <p>Monthly</p>
+                            </div>
+                            <div class="price_detail">
+                                <span>
+                                    <img src="{% static '/images/check.png' %}" alt="">
+                                    <p>Improve Your Email Marketing</p>
+                                </span>
+                                <span>
+                                    <img src="{% static '/images/check.png' %}" alt="">
+                                    <p>User And Admin Rights Control</p>
+                                </span>
+                                <span>
+                                    <img src="{% static '/images/check.png' %}" alt="">
+                                    <p> List Building And Cleaning.</p>
+                                </span>
+                                <span>
+                                    <img src="{% static '/images/check.png' %}" alt="">
+                                    <p>Collected Data Management.</p>
+                                </span>
+                                <span>
+                                    <img src="{% static '/images/cancel.png' %}" alt="">
+                                    <p>More Planning And Evaluation</p>
+                                </span>
+
+                            </div>
+                            <a href="" class="button">REQUEST</a>
+
+                        </li>
+                        <li>
+                            <h4>COMPLETE</h4>
+                            <p>Just to see what can be achieved</p>
+                            <div class="pricebox">
+                                <h5>$399</h5>
+                                <p>Monthly</p>
+                            </div>
+                            <div class="price_detail">
+                                <span>
+                                    <img src="{% static '/images/check.png' %}" alt="">
+                                    <p>Improve Your Email Marketing</p>
+                                </span>
+                                <span>
+                                    <img src="{% static '/images/check.png' %}" alt="">
+                                    <p>User And Admin Rights Control</p>
+                                </span>
+                                <span>
+                                    <img src="{% static '/images/check.png' %}" alt="">
+                                    <p>List Building And Cleaning.</p>
+                                </span>
+                                <span>
+                                    <img src="{% static '/images/check.png' %}" alt="">
+                                    
+                                    <p>Collected Data Management.</p>
+                                </span>
+                                <span>
+                                    <img src="{% static '/images/check.png' %}" alt="">
+                                    
+                                    <p>More Planning And Evaluation.</p>
+                                </span>
+
+                            </div>
+                            <a href="" class="button">REQUEST</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+<!-- form -->
+        <section id="form">
+            <section class="wrapper">
+                <div class="left">
+                    <h3>Fill The Following form to requesr a meeting</h3>
+                    <p>Evolo is one of the easiest and feature packed marketing automation apps in the market.Discover what it can do for your business organization right away.</p>
+                    <span>
+                        <img src="{% static '/images/check.png' %}" alt="">
+                        <p>Automate your marketing activities and get results today</p>
+                    </span>
+                    <span>
+                        <img src="{% static '/images/check.png' %}" alt="">
+                        <p>Interact with all your targeted customers at a personal level</p>
+                    </span>
+                    <span>
+                        <img src="{% static '/images/check.png' %}" alt="">
+                        <p>Convince them to buy your company's awesome products.</p>
+                    </span>
+                    <span>
+                        <img src="{% static '/images/check.png' %}" alt="">
+                        <p>Save precious time and invest it where you need it the most.</p>
+                    </span>
+                </div>
+                <div class="right">
+                    <form action="{% url 'web:contact' %}" method="post" class="ajax">
+                        {% csrf_token %}
+                        <div class="one_by_two">
+                            <!-- <input type="text" value="" name="name" placeholder="FULL NAME" required> -->
+                            {{form.name}}
+                        </div>
+                        <div class="one_by_two">
+                            <!-- <input type="email" value="" name="email" placeholder="EMAIL" required> -->
+                            {{form.email}}
+                        </div>
+                        <div class="one_by_two">
+                            <!-- <input type="text" value="" name="number" placeholder="PHONE NUMBER" required> -->
+                            {{form.number}}
+                        </div>
+                        <div class="one_by_two">
+                            <!-- <select class="form-control-select" name="interest">
+                                <option class="select-option" disabled="disabled" selected="selected" value="">INTRESTED IN...</option>
+                                <option class="select-option" value="Starter">STARTER</option>
+                                <option class="select-option" value="Medium">MEDIUM</option>
+                                <option class="select-option" value="Complete">COMPLETE</option>
+                            </select> -->
+                            {{form.interest}}
+                        </div>
+                        <div class="checkbox"> 
+                             <!-- <input type="checkbox" id="id_checkbox" name="user_agreement" value="True"> -->
+                             {{form.user_agreement}}
+                            <label for="{{form.user_agreement.id_for_label}}">I agree with Evolo's stated <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms &amp; Conditions</a></label><br>
+                        </div>
+                        <input class="submit" type="submit" value="REQUEST" />
+
+                    </form>
+                    <!-- <a href="" class="button">REQUEST</a> -->
+                </div>
+            </section>
+        </section>
+<!-- video -->
+        <section id="video">
+            <section class="wrapper">
+                <h4>Check Out The Video</h4>
+                <div class="imagebox">
+                    <img src="{% static '/images/video-frame.svg' %}" alt="">
+                    <p>This video will show you a case study for one of our  Major Customers and will help you understand why your startup needs Evolo in this highly competitive market</p>
+                </div>
+             </section>
+        </section>
+<!-- team -->
+        <section id="team">
+            <section class="wrapper">
+                <div class="top">
+                    <h3>About Team</h3>
+                    <p>Meat our team of specialized marketers and business developers which will help you research new products and launch them in new emerging markets</p>
+                </div>
+                <ul>
+                    {% for team in teams %}
+                    <li>
+                        <img src="{{team.image.url}}" alt="">
+                        <h5>{{team.name}}</h5>
+                        <p>{{team.job_role}}</p>
+                        <span class="social">
+                            <a href=""><img src="{% static '/images/facebook.png' %}" alt=""></a>
+                            <a href=""><img src="{% static '/images/twitter.png' %}" alt=""></a>
+                        </span>
+                    </li>
+                   {% endfor %}
+                </ul>
+            <section>
+<!-- footer -->
+            <section id="footer">
+                <section class="wrapper">
+                    <div class="about">
+                        <h3>About Evolo</h3>
+                        <p>We're passionate about offering some of the best business growth services for startups</p>
+                    </div>
+                    <div class="links">
+                        <h3>Important Links</h3>
+                        <span class="link">
+                            <img src="{% static '/images/play.svg' %}" alt="">
+                            <p>Our business partners<a href="">startupguide.com </a></p>
+
+                        </span>
+                        <span class="link">
+                            <img src="{% static '/images/play.svg' %}" alt="">
+                            <p>Read our <a href="">Terms & Conditions, Privacy Policy </a></p>
+                        </span>
+                    </div>
+                    <div class="socialmedia">
+                        <h3>Social Media</h3>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="{% static '/images/instagram.png' %}" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="{% static '/images/twitter.png' %}" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="{% static '/images/google-plus.png' %}" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="{% static '/images/facebook.png' %}" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="{% static '/images/linkedin.png' %}" alt="">
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </section>
+            </section>  
+<!-- copyright -->
+            <section id="copyright">
+                <section class="wrapper">
+                    <div class="container">
+                        <p>Copyright © 2020 All rights reserved</p>
+                    </div>
+                </section>
+            </section>
+            <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+            <script src="{% static 'js/sweetalert2.min.js' %}"></script>
+            <script src="{% static 'js/script.js' %}"></script>
+    </body>
+</html>
